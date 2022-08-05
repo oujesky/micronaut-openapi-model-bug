@@ -1,0 +1,24 @@
+openapi: 3.0.1
+info:
+  title: micronaut-openapi-model-bug
+  version: "0.0"
+paths:
+  /api/example:
+    get:
+      operationId: getExample
+      responses:
+        "200":
+          description: getExample 200 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ExampleModel'
+components:
+  schemas:
+    ExampleModel:
+      type: object
+      properties:
+        nameInPojo:
+          type: string
+          description: example field
+      description: ""
